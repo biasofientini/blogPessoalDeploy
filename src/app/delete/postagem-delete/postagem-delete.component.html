@@ -1,0 +1,35 @@
+<div class="container mb-5 mt-5">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-secundary">Apagar postagem</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-secundary">Você tem certeza de que deseja apagar essa postagem?</h1>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-tittle m-0">
+                        {{postagem.titulo}}
+                    </h5>
+                </div>
+                <small class="text-muted">Tema: {{postagem.tema.descricao}}</small>
+                <p class="card-text mt-3">{{postagem.texto}}</p>
+                <p class="card-text"><small class="text-muted">{{postagem.data | date: "dd/MM/yyyy 'às' HH:mm"}}</small></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-12 d-flez justify-content-center">
+            <button class="btn btn-danger">Não</button>
+            <button class="btn btn-success" (click)='apagar()'>Sim</button>
+        </div>
+    </div>
+</div>
